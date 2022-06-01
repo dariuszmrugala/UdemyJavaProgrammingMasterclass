@@ -17,23 +17,14 @@ public class Customer {
         return name;
     }
 
-
-    public boolean addTransaction(double amount) {
-        return transactions.add(amount);
+    public ArrayList<Double> getTransactions() {
+        return transactions;
     }
 
-    @Override
-    public String toString() {
-        return "Customer{" +
-                "name='" + name + '\'' +
-                '}';
+    public void addTransaction(double amount) {
+         transactions.add(amount);
     }
 
-    public void showTransactions() {
-        System.out.print("{ ");
-        for(int i = 0; i < transactions.size(); i++) {
-            System.out.print(transactions.get(i) + ", ");
-        }
-        System.out.print(" }");
-    }
+
+
 }

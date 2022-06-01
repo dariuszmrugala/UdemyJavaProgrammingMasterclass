@@ -2,31 +2,22 @@ package section8.ex45;
 
 public class BankClient {
     public static void main(String[] args) {
-        Bank bank = new Bank();
+        Bank bank = new Bank("National Australia Bank");
 
-        bank.addNewBranch("Wroclaw");
-        bank.addCustomerToBranch("DarekZWroclawia", "Wroclaw", 100.0);
-        bank.addTransaction("DarekZWroclawia", "Wroclaw", 300);
-        bank.addCustomerToBranch("ZuitekZWroclawia", "Wroclaw", 0.0);
-        bank.addCustomerToBranch("DarekZWroclawia", "Wroclaw", 0.0);
-        bank.listCustomers("Wroclaw",true);
+        bank.addBranch("Adelaide");
 
-        bank.addNewBranch("Warszawka");
-        bank.addCustomerToBranch("DarekZWarszawy", "Warszawka", 0.0);
-        bank.listCustomers("Warszawka", false);
+        bank.addCustomer("Adelaide", "Tim", 50.05);
+        bank.addCustomer("Adelaide", "Mike", 175.34);
+        bank.addCustomer("Adelaide", "Percy", 220.12);
 
-        bank.addNewBranch("Poznan");
-        if(!bank.addCustomerToBranch("darek", "Poznan", 32.22)){
-            System.out.println("Branch Poznan doesn't exist");
-        }
+        bank.addCustomerTransaction("Adelaide", "Tim", 44.22);
+        bank.addCustomerTransaction("Adelaide", "Tim", 12.44);
+        bank.addCustomerTransaction("Adelaide", "Mike", 1.65);
 
-//        bank.addNewBranch("Poznan");
+        bank.listCustomers("Adelaide", false);
 
-        bank.addCustomerToBranch("darek", "Poznan", 33.0);
-
-        bank.addCustomerToBranch("darek", "Poznan", 33.0);
-
-        bank.listCustomers("Poznan", true);
-
+//        System.out.println(bank.addBranch("Sydney"));
+//
+//        System.out.println(bank.addBranch("Sydney"));
     }
 }
