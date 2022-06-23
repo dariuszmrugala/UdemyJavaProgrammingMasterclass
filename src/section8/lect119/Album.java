@@ -32,8 +32,8 @@ public class Album {
     }
 
     public boolean addToPlayList(int trackNubmer, LinkedList<Song> playList) {
-        if((trackNubmer > 0) && trackNubmer <= this.songs.size()) {
-            playList.add(this.songs.get(trackNubmer));
+        if((trackNubmer - 1 >= 0) && trackNubmer <= this.songs.size()) {
+            playList.add(this.songs.get(trackNubmer - 1));
             return true;
         }
         System.out.println("This album does not have a track " + trackNubmer);
