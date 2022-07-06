@@ -33,5 +33,10 @@ public class Main {
                 return false;
             }
         };
+
+        darekPhone = new MobliePhone(1234);
+        darekPhone.powerOn();
+        darekPhone.callPhone(1234);
+        darekPhone.answer();
     }
 }
